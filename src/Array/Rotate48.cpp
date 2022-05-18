@@ -10,7 +10,8 @@ public:
 
         while(times <= (n / 2))  {
             int len = n - times * 2;
-            //从每一圈的第一个元素开始，依次移动一位，总共需要移动该圈的长度-1的位数即可达到旋转90度的效果(把每四个在对称位置的元素看作一组，如1，3，9，7)
+            //从每一圈的第一个元素开始，依次交换值，即可达到旋转90度的效果(把每四个在对称位置的元素看作一组，如1，3，9，7)
+            //总共可以分出len - 1组，比如len=3的时候，就有两组，len=1的时候一组
             for(int i = 0; i < len - 1; i++) {
                 int temp = matrix[times][times + i]; //确定这一圈的领头元素
                 matrix[times][times + i] = matrix[times + len - 1 - i][times];
