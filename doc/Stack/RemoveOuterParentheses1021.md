@@ -1,0 +1,1 @@
+[题目](https://leetcode.cn/problems/remove-outermost-parentheses/)
